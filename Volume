@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+M=51
+E=np.linspace(0,5,M)
+Omega=np.zeros(len(E))
+N=150
+A=1
+
+for i in range(len(E)):
+    Omega[i]=np.log(A*E[i]**(1.5*N))
+
+plt.xlabel("E")
+plt.ylabel(r"$ln (\Omega(E))$")
+plt.plot(E,Omega)
